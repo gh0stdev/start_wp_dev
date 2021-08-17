@@ -73,4 +73,4 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * Helper additions functions.
  */
-require get_template_directory() . '/includes/customizer.php';
+require get_template_directory() . '/includes/helpers.php';
