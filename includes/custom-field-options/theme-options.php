@@ -5,25 +5,60 @@ if ( ! defined( 'ABSPATH' ) ) {
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-// Default options page
-$basic_options_container = Container::make( 'theme_options', __( 'Опции Темы:' ) )
-    ->add_fields( array(
-        Field::make( 'header_scripts', 'crb_header_script', __( 'Вставить скрипты в header' ) ),
-        Field::make( 'footer_scripts', 'crb_footer_script', __( 'Вставить скрипты в footer' ) ),
-    ) );
+Container::make( 'theme_options', 'Настройки темы' )
+    ->set_icon( 'dashicons-carrot' )
+    ->add_tab( 'Шапка', array(
+        Field::make( 'select', 'sp_header_logic', 'Будет использоваться логотип?' )
+            ->add_options(array(
+                'yes' => 'Да, буду использовать логотип',
+                'no' => 'Нет, буду использовать текст',
+            )),
+        Field::make( 'image', 'sp_header_logo', 'Логотип' )
+            ->set_conditional_logic(array(
+                'relation' => 'AND',
+                array(
+                    'field' => 'sp_header_logic',
+                    'value' => 'yes',
+                    'compare' => '=',
+                )
+            )),
+        Field::make( 'text', 'sp_header_site_name', 'Название сайта' )
 
-// Add second options page under 'Basic Options'
-Container::make( 'theme_options', __( 'Social Links' ) )
-    ->set_page_parent( $basic_options_container ) // reference to a top level container
-    ->add_fields( array(
-        Field::make( 'text', 'crb_facebook_link', __( 'Facebook Link' ) ),
-        Field::make( 'text', 'crb_twitter_link', __( 'Twitter Link' ) ),
-    ) );
+            ->set_default_value('Сайт')
+            ->set_conditional_logic(array(
+                'relation' => 'AND',
+                array(
+                    'field' => 'sp_header_logic',
+                    'value' => 'no',
+                    'compare' => '=',
+                )
+            )),
+        Field::make( 'text', 'sp_header_site_desc', 'Описание сайта' )
+            ->set_conditional_logic(array(
+                'relation' => 'AND',
+                array(
+                    'field' => 'sp_header_logic',
+                    'value' => 'no',
+                    'compare' => '=',
+                )
+            ))
+            ->set_default_value(get_bloginfo('description')),
 
-// Add third options page under "Appearance"
-Container::make( 'theme_options', __( 'Customize Background' ) )
-    ->set_page_parent( 'themes.php' ) // identificator of the "Appearance" admin section
-    ->add_fields( array(
-        Field::make( 'color', 'crb_background_color', __( 'Background Color' ) ),
-        Field::make( 'image', 'crb_background_image', __( 'Background Image' ) ),
+    ) )
+    ->add_tab( 'Подвал', array(
+        Field::make( 'text', 'sp_footer_copy', 'Копирайта' )
+            ->set_default_value('&copy; 2017 Electronic Store. All rights reserved')
+            ->set_width( 30 ),
+        Field::make( 'radio', 'sp_footer_newsletter_show', 'Показывать блок подписки' )
+            ->add_options( array(
+                'on' => 'Включить',
+                'off' => 'Выключить',
+            ) )
+            ->set_width( 30 ),
+        Field::make( 'radio', 'sp_footer_widgets_show', 'Показывать блок виджетов' )
+            ->add_options( array(
+                'on' => 'Включить',
+                'off' => 'Выключить',
+            ) )
+            ->set_width( 30 ),
     ) );

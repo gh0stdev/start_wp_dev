@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'helveticaneuecyrmedium';
-    src: url('fonts/helveticaneuecyr-medium-webfont.eot');
-    src: url('fonts/helveticaneuecyr-medium-webfont.eot%3F') format('embedded-opentype'),
-    url('fonts/helveticaneuecyr-medium-webfont.woff2') format('woff2'),
-    url('fonts/helveticaneuecyr-medium-webfont.woff') format('woff'),
-    url('fonts/helveticaneuecyr-medium-webfont.ttf') format('truetype');
+    src: url('../fonts/helveticaneuecyr-medium-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-medium-webfont.eot%3F') format('embedded-opentype'),
+    url('../fonts/helveticaneuecyr-medium-webfont.woff2') format('woff2'),
+    url('../fonts/helveticaneuecyr-medium-webfont.woff') format('woff'),
+    url('../fonts/helveticaneuecyr-medium-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -132,7 +132,7 @@ body {
 }
 
 .swiper-wrapper .swiper-slide {
-    /*Todo: ”·‡Ú¸ ˝ÚÛ Â·‡ÚÌ˛!*/
+    /*Todo: –£–±—Ä–∞—Ç—å —ç—Ç—É –µ–±–∞—Ç–Ω—é!*/
     min-height: 200px !important;
 }
 
@@ -809,7 +809,7 @@ div[id^="wait_comp_"] {
 }
 
 .rub:before {
-    content: " Û·.";
+    content: " —Ä—É–±.";
 }
 
 span.bold {
@@ -939,7 +939,7 @@ span.bold {
 .tv-main-img {
     max-width: 1600px;
     margin: 70px auto;
-    background: url("images/new-tv-main-img.jpg") no-repeat center center;
+    background: url("../images/new-tv-main-img.jpg") no-repeat center center;
     background-size: cover;
     height: 600px;
 }
@@ -1581,7 +1581,7 @@ span.bold {
         height: 32px;
         top: 155px;
         position: absolute;
-        background: url("images/tv-prev.png") no-repeat center center;
+        background: url("../images/tv-prev.png") no-repeat center center;
         z-index: 9;
         left: 0;
     }
@@ -1591,7 +1591,7 @@ span.bold {
         height: 32px;
         top: 155px;
         position: absolute;
-        background: url("images/tv-next.png") no-repeat center center;
+        background: url("../images/tv-next.png") no-repeat center center;
         z-index: 9;
         right: 0;
     }
@@ -1887,7 +1887,7 @@ sh-balloon__status.close {
 }
 
 .viber-button {
-    background: url("images/viber.png") no-repeat center center;
+    background: url("../images/viber.png") no-repeat center center;
     background-size: contain;
     width: 32px;
     height: 32px;
@@ -1896,7 +1896,7 @@ sh-balloon__status.close {
 }
 
 .whatsapp-button {
-    background: url("images/whatsapp.png") no-repeat center center;
+    background: url("../images/whatsapp.png") no-repeat center center;
     background-size: contain;
     width: 32px;
     height: 32px;
@@ -1907,7 +1907,7 @@ sh-balloon__status.close {
 .virtual-designer-main-img {
     max-width: 1600px;
     margin: 70px auto;
-    background: url("images/virtual-designer-main-img.png") no-repeat center center;
+    background: url("../images/virtual-designer-main-img.png") no-repeat center center;
     background-size: cover;
     height: 612px;
     display: flex;
@@ -2043,7 +2043,7 @@ sh-balloon__status.close {
     vertical-align: middle;
     content: '';
     margin-right: 0;
-    background: url("images/klipsy.png") no-repeat 0 0;
+    background: url("../images/klipsy.png") no-repeat 0 0;
     width: 40px;
     height: 31px;
     margin-right: 5px;
@@ -2079,7 +2079,7 @@ sh-balloon__status.close {
     position: fixed;
     left: 25px;
     bottom: 35px;
-    background: url("images/virtual-designer-banner-new.png") no-repeat center center;
+    background: url("../images/virtual-designer-banner-new.png") no-repeat center center;
     height: 167px;
     width: 168px;
     z-index: 999;
@@ -2931,7 +2931,7 @@ a.primary-link:hover {
 }
 
 .header-body__logo {
-    background: url('images/dyatkovo-logo.svg') no-repeat center center;
+    background: url('../images/dyatkovo-logo.svg') no-repeat center center;
 }
 
 .checkbox-styled-red-text {
@@ -2984,7 +2984,7 @@ a.primary-link:hover {
 
     .header-body__item-link-phn:after {
         content: "";
-        background: url("images/phone-call.svg") no-repeat center center;
+        background: url("../images/phone-call.svg") no-repeat center center;
         height: 17px;
         width: 17px;
         background-size: contain;
@@ -3012,282 +3012,282 @@ a.primary-link:hover {
 }
 
 .goods-menu_categories .goods-menu__item-icon_komody:after {
-    background: url('images/sections/komody.svg') no-repeat 0 0;
+    background: url('../images/komody.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_krovati_dlya_spalny:after {
-    background: url('images/sections/krovati_dlya_spalny.svg') no-repeat 0 0;
+    background: url('../images/krovati_dlya_spalny.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_krovati_podrostkovye:after {
-    background: url('images/sections/krovati_podrostkovye.svg') no-repeat 0 0;
+    background: url('../images/krovati_podrostkovye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_modulnye-gostinye:after {
-    background: url('images/sections/modulnye-gostinye.svg') no-repeat 0 0;
+    background: url('../images/modulnye-gostinye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_molodezhnye-garnitury:after {
-    background: url('images/sections/molodezhnye-garnitury.svg') no-repeat 0 0;
+    background: url('../images/molodezhnye-garnitury.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_polki:after {
-    background: url('images/sections/polki.svg') no-repeat 0 0;
+    background: url('../images/polki.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_prikhozhie:after {
-    background: url('images/sections/prikhozhie.svg') no-repeat 0 0;
+    background: url('../images/prikhozhie.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_pufy:after {
-    background: url('images/sections/pufy.svg') no-repeat 0 0;
+    background: url('../images/pufy.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_shkafy_dlya_spalni:after {
-    background: url('images/sections/shkafy_dlya_spalni.svg') no-repeat 0 0;
+    background: url('../images/shkafy_dlya_spalni.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_shkafy_knizhnye:after {
-    background: url('images/sections/shkafy_knizhnye.svg') no-repeat 0 0;
+    background: url('../images/shkafy_knizhnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_shkafy_nastennye:after {
-    background: url('images/sections/shkafy_nastennye.svg') no-repeat 0 0;
+    background: url('../images/shkafy_nastennye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_shkafy_penaly:after {
-    background: url('images/sections/shkafy_penaly.svg') no-repeat 0 0;
+    background: url('../images/shkafy_penaly.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_shkafy_v_prikhozhuyu:after {
-    background: url('images/sections/shkafy_v_prikhozhuyu.svg') no-repeat 0 0;
+    background: url('../images/shkafy_v_prikhozhuyu.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_shkafy_vitriny:after {
-    background: url('images/sections/shkafy_vitriny.svg') no-repeat 0 0;
+    background: url('../images/shkafy_vitriny.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_sleep_goods:after {
-    background: url('images/sections/sleep_goods.svg') no-repeat 0 0;
+    background: url('../images/sleep_goods.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_sleep_goods_matresses:after {
-    background: url('images/sections/sleep_goods_matresses.svg') no-repeat 0 0;
+    background: url('../images/sleep_goods_matresses.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_sleep_goods_namatrasniki:after {
-    background: url('images/sections/sleep_goods_namatrasniki.svg') no-repeat 0 0;
+    background: url('../images/sleep_goods_namatrasniki.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_spalnye-garnitury:after {
-    background: url('images/sections/spalnye-garnitury.svg') no-repeat 0 0;
+    background: url('../images/spalnye-garnitury.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_stellazhi:after {
-    background: url('images/sections/stellazhi.svg') no-repeat 0 0;
+    background: url('../images/stellazhi.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_stenki:after {
-    background: url('images/sections/stenki.svg') no-repeat 0 0;
+    background: url('../images/stenki.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_stoly_pismennye_i_kompyuternye:after {
-    background: url('images/sections/stoly_pismennye_i_kompyuternye.svg') no-repeat 0 0;
+    background: url('../images/stoly_pismennye_i_kompyuternye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_stoly_tualetnye:after {
-    background: url('images/sections/stoly_tualetnye.svg') no-repeat 0 0;
+    background: url('../images/stoly_tualetnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_stoly_zhurnalnye:after {
-    background: url('images/sections/stoly_zhurnalnye.svg') no-repeat 0 0;
+    background: url('../images/stoly_zhurnalnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_tumby_obuvnitsy:after {
-    background: url('images/sections/tumby_obuvnitsy.svg') no-repeat 0 0;
+    background: url('../images/tumby_obuvnitsy.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_tumby_pod_tv:after {
-    background: url('images/sections/tumby_pod_tv.svg') no-repeat 0 0;
+    background: url('../images/tumby_pod_tv.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_tumby_prikrovatnye:after {
-    background: url('images/sections/tumby_prikrovatnye.svg') no-repeat 0 0;
+    background: url('../images/tumby_prikrovatnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_tumby_universalnye:after {
-    background: url('images/sections/tumby_universalnye.svg') no-repeat 0 0;
+    background: url('../images/tumby_universalnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item-icon_zerkala_i_veshalki:after {
-    background: url('images/sections/zerkala_i_veshalki.svg') no-repeat 0 0;
+    background: url('../images/zerkala_i_veshalki.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_komody:after {
-    background: url('images/sections/active/komody.svg') no-repeat 0 0;
+    background: url('../images/komody.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_krovati_dlya_spalny:after {
-    background: url('images/sections/active/krovati_dlya_spalny.svg') no-repeat 0 0;
+    background: url('../images/krovati_dlya_spalny.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_krovati_podrostkovye:after {
-    background: url('images/sections/active/krovati_podrostkovye.svg') no-repeat 0 0;
+    background: url('../images/krovati_podrostkovye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_modulnye-gostinye:after {
-    background: url('images/sections/active/modulnye-gostinye.svg') no-repeat 0 0;
+    background: url('../images/modulnye-gostinye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_molodezhnye-garnitury:after {
-    background: url('images/sections/active/molodezhnye-garnitury.svg') no-repeat 0 0;
+    background: url('../images/molodezhnye-garnitury.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_polki:after {
-    background: url('images/sections/active/polki.svg') no-repeat 0 0;
+    background: url('../images/polki.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_prikhozhie:after {
-    background: url('images/sections/active/prikhozhie.svg') no-repeat 0 0;
+    background: url('../images/prikhozhie.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_pufy:after {
-    background: url('images/sections/active/pufy.svg') no-repeat 0 0;
+    background: url('../images/pufy.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_shkafy_dlya_spalni:after {
-    background: url('images/sections/active/shkafy_dlya_spalni.svg') no-repeat 0 0;
+    background: url('../images/shkafy_dlya_spalni.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_shkafy_knizhnye:after {
-    background: url('images/sections/active/shkafy_knizhnye.svg') no-repeat 0 0;
+    background: url('../images/shkafy_knizhnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_shkafy_nastennye:after {
-    background: url('images/sections/active/shkafy_nastennye.svg') no-repeat 0 0;
+    background: url('../images/shkafy_nastennye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_shkafy_penaly:after {
-    background: url('images/sections/active/shkafy_penaly.svg') no-repeat 0 0;
+    background: url('../images/shkafy_penaly.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_shkafy_v_prikhozhuyu:after {
-    background: url('images/sections/active/shkafy_v_prikhozhuyu.svg') no-repeat 0 0;
+    background: url('../images/shkafy_v_prikhozhuyu.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_shkafy_vitriny:after {
-    background: url('images/sections/active/shkafy_vitriny.svg') no-repeat 0 0;
+    background: url('../images/shkafy_vitriny.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_sleep_goods:after {
-    background: url('images/sections/active/sleep_goods.svg') no-repeat 0 0;
+    background: url('../images/sleep_goods.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_sleep_goods_matresses:after {
-    background: url('images/sections/active/sleep_goods_matresses.svg') no-repeat 0 0;
+    background: url('../images/sleep_goods_matresses.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_sleep_goods_namatrasniki:after {
-    background: url('images/sections/active/sleep_goods_namatrasniki.svg') no-repeat 0 0;
+    background: url('../images/sleep_goods_namatrasniki.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_spalnye-garnitury:after {
-    background: url('images/sections/active/spalnye-garnitury.svg') no-repeat 0 0;
+    background: url('../images/spalnye-garnitury.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_stellazhi:after {
-    background: url('images/sections/active/stellazhi.svg') no-repeat 0 0;
+    background: url('../images/stellazhi.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_stenki:after {
-    background: url('images/sections/active/stenki.svg') no-repeat 0 0;
+    background: url('../images/stenki.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_stoly_pismennye_i_kompyuternye:after {
-    background: url('images/sections/active/stoly_pismennye_i_kompyuternye.svg') no-repeat 0 0;
+    background: url('../images/stoly_pismennye_i_kompyuternye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_stoly_tualetnye:after {
-    background: url('images/sections/active/stoly_tualetnye.svg') no-repeat 0 0;
+    background: url('../images/stoly_tualetnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_stoly_zhurnalnye:after {
-    background: url('images/sections/active/stoly_zhurnalnye.svg') no-repeat 0 0;
+    background: url('../images/stoly_zhurnalnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_tumby_obuvnitsy:after {
-    background: url('images/sections/active/tumby_obuvnitsy.svg') no-repeat 0 0;
+    background: url('../images/tumby_obuvnitsy.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_tumby_pod_tv:after {
-    background: url('images/sections/active/tumby_pod_tv.svg') no-repeat 0 0;
+    background: url('../images/tumby_pod_tv.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_tumby_prikrovatnye:after {
-    background: url('images/sections/active/tumby_prikrovatnye.svg') no-repeat 0 0;
+    background: url('../images/tumby_prikrovatnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_tumby_universalnye:after {
-    background: url('images/sections/active/tumby_universalnye.svg') no-repeat 0 0;
+    background: url('../images/tumby_universalnye.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 
 .goods-menu_categories .goods-menu__item:hover .goods-menu__item-icon_zerkala_i_veshalki:after {
-    background: url('images/sections/active/zerkala_i_veshalki.svg') no-repeat 0 0;
+    background: url('../images/zerkala_i_veshalki.svg') no-repeat 0 0;
     background-size: 100px 50px;
 }
 

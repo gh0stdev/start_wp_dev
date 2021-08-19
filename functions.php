@@ -25,6 +25,11 @@ function ast_register_custom_fields() {
 require get_template_directory() . '/includes/theme-settings.php';
 
 /**
+ * Require Custom Menu-Area
+ */
+require get_template_directory() . '/includes/custom-menu.php';
+
+/**
  * Require Widget Settings
  */
 require get_template_directory() . '/includes/widget-areas.php';

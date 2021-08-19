@@ -98,3 +98,9 @@ function sp_content_width() {
     $GLOBALS['content_width'] = apply_filters( 'sp_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'sp_content_width', 0 );
+
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
