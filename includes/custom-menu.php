@@ -4,9 +4,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 register_nav_menus(array(
-    'primary' => 'Основное Меню',
-    'secodary' => 'Верхнее Меню',
-    'third' => 'Footer Меню',
+    'primary' => 'Супер Меню',
+    'secodary' => 'Верхнее Меню Статичных страниц',
+    'third' => 'Footer Меню Каталога',
+    'pre_third' => 'Footer Меню Статичных страниц'
 ));
 
 
@@ -25,6 +26,22 @@ function sp_pre_header_menu(){
         'container' => '',
         'menu' => 'HeadStaticMenu',
         'walker' => new SP_Walker_Pre_Header_Menu(),
+    ) );
+}
+
+function sp_catalog_footer_menu(){
+    wp_nav_menu( array(
+        'container' => '',
+        'menu' => 'FooterMenuCatalog',
+        'walker' => new SP_Walker_Catalog_Footer_Menu(),
+    ) );
+}
+
+function sp_static_footer_menu(){
+    wp_nav_menu( array(
+        'container' => '',
+        'menu' => 'FooterMenuStatic',
+        'walker' => new SP_Walker_Static_Footer_Menu(),
     ) );
 }
 
@@ -114,7 +131,6 @@ class SP_Walker_Super_Menu extends Walker_Nav_Menu
     }
 }
 
-
 class SP_Walker_Pre_Header_Menu extends Walker_Nav_Menu
 {
     public $pred_menu = array();
@@ -132,6 +148,84 @@ class SP_Walker_Pre_Header_Menu extends Walker_Nav_Menu
 
         foreach ($pred_menu as $menu_item) {
             $html .= '<a href="' . $menu_item['url'] . '" class=" pre-header__menu-item">' . $menu_item['title'] . '</a>';
+        }
+
+        $html .= '</nav>';
+
+        return $html;
+    }
+}
+
+class SP_Walker_Catalog_Footer_Menu extends Walker_Nav_Menu
+{
+    public $pred_menu = array();
+
+    public function walk($elements, $max_depth, ...$args)
+    {
+        $html = '';
+
+        foreach ($elements as $element) {
+            if ($element->menu_item_parent == 0) {
+                $pred_menu[$element->ID] = (array)$element;
+            }
+
+            if (array_key_exists($element->menu_item_parent, $pred_menu)) {
+                $pred_menu[$element->menu_item_parent]['childs'][] = (array)$element;
+            }
+        }
+
+        foreach ($pred_menu as $menu_item) {
+            foreach ($menu_item['childs'] as $child => $child_val) {
+                foreach ($elements as $element) {
+                    if ($element->menu_item_parent == $child_val['ID']) {
+                        $pred_menu[$menu_item['ID']]['childs'][$child]['childs'][] = (array)$element;
+                    }
+                }
+            }
+        }
+
+        foreach ($pred_menu as $menu_item) {
+            $html .= '<nav class="footer__menu-multi">';
+
+            $html .= '<div class="footer__menu-multi-title">' .
+                $menu_item['title'] . '</div>';
+
+            if (isset($menu_item['childs'])) {
+                foreach ($menu_item['childs'] as $child_cat) {
+//                    $html .= '<div class="category-cataloge">' . $child_cat['title'] . '</div>';
+
+                    if (isset($child_cat['childs'])) {
+                        foreach ($child_cat['childs'] as $child_prod) {
+                            $html .= '<a href="' . $child_prod['url'] . '" class="footer__menu-multi-item">
+                            ' . $child_prod['title'] . '</a>';
+                        }
+                    }
+                }
+            }
+            $html .= '</nav>';
+        }
+
+        return $html;
+    }
+}
+
+class SP_Walker_Static_Footer_Menu extends Walker_Nav_Menu
+{
+    public $pred_menu = array();
+
+    public function walk($elements, $max_depth, ...$args)
+    {
+        $html = '';
+
+        foreach ($elements as $element) {
+            $pred_menu[$element->ID] = (array)$element;
+        }
+
+
+        $html = '<nav class="footer__menu-block">';
+
+        foreach ($pred_menu as $menu_item) {
+            $html .= '<a href="' . $menu_item['url'] . '" class="footer__menu-item">' . $menu_item['title'] . '</a>';
         }
 
         $html .= '</nav>';

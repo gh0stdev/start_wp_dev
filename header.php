@@ -8,7 +8,8 @@
  *
  * @package SegaPrototype
  */
-
+$work_time = carbon_get_theme_option('sp_work_time');
+$phone = carbon_get_theme_option('sp_phone');
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -290,10 +291,9 @@
 <!--                            </div>-->
 
                             <div class="header-body__item ws-phone">
-                                <a href="tel:88005550085"
-                                   class="header-body__item-link-phn header-body__item-link header-body__item-link_tdn">8
-                                    800 555 00 85</a>
-                                <div class="header-body__timetable-itself  header-mobile-hidden">с 8:00 до 21:00</div>
+                                <a href="tel:<?= $phone ?>"
+                                   class="header-body__item-link-phn header-body__item-link header-body__item-link_tdn"><?= $phone ?></a>
+                                <div class="header-body__timetable-itself  header-mobile-hidden"><?= $work_time ?></div>
                                 <a href="javascript:void(0)" data-href="#call-request-popup"
                                    class="header-body__timetable-call-request js-popup-link  header-mobile-hidden">Заказать
                                     звонок</a>
