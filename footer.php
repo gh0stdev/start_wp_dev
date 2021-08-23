@@ -119,33 +119,9 @@ $soc_vk = carbon_get_theme_option('sp_footer_soc_vk');
         </div>
     </form>
     <div class="mobile-menu__main-part">
-        <a href="index.html#" class="mobile-menu__close" id="mobile-menu-close"></a>
+        <a href="#" class="mobile-menu__close" id="mobile-menu-close"></a>
         <div class="mobile-menu__list-wrap">
-            <div class="mobile-menu__list">
-                <a href="https://dyatkovo.ru/virtual-designer/" class="mobile-menu__item">Виртуальный дизайнер</a>
-                <a href="https://dyatkovo.ru/kuhni/" class="mobile-menu__item ">кухни</a>
-                <a href="https://dyatkovo.ru/catalogue/gostinye/" class="mobile-menu__item ">гостиные</a>
-                <a href="https://dyatkovo.ru/catalogue/spalnye_garnitury/" class="mobile-menu__item ">спальни</a>
-                <a href="https://dyatkovo.ru/catalogue/molodezhnye/" class="mobile-menu__item ">молодежные</a>
-                <a href="https://dyatkovo.ru/catalogue/prikhozhie/" class="mobile-menu__item ">прихожие</a>
-                <a href="https://dyatkovo.ru/catalogue/shkafy/" class="mobile-menu__item ">Шкафы</a>
-                <a href="https://dyatkovo.ru/catalogue/krovati/" class="mobile-menu__item ">Кровати</a>
-                <a href="https://dyatkovo.ru/catalogue/" class="mobile-menu__item ">все товары</a>
-                <a href="https://dyatkovo.ru/catalogue/special-offer/" class="mobile-menu__item mobile-menu__item_special">Ликвидация</a>
-            </div>
-            <div class="mobile-menu__list">
-                <a href="https://dyatkovo.ru/virtual-designer/" class="mobile-menu__item">Виртуальный дизайнер</a>
-                <a href="https://dyatkovo.ru/buyers/" class="mobile-menu__item ">Покупателям</a>
-                <a href="https://dyatkovo.ru/partners/" class="mobile-menu__item ">Партнёрам</a>
-                <a href="https://dyatkovo.ru/news/" class="mobile-menu__item ">Новости</a>
-                <a href="https://dyatkovo.ru/actions/" class="mobile-menu__item ">Акции</a>
-                <a href="https://dyatkovo.ru/articles/" class="mobile-menu__item ">Статьи</a>
-                <a href="https://dyatkovo.ru/jobs/" class="mobile-menu__item ">Вакансии</a>
-                <a href="https://dyatkovo.ru/credit/" class="mobile-menu__item ">Рассрочка</a>
-                <a href="https://dyatkovo.ru/about/" class="mobile-menu__item ">О нас</a>
-                <a href="https://dyatkovo.ru/faq/" class="mobile-menu__item ">FAQ</a>
-                <a href="https://dyatkovo.ru/stores/" class="mobile-menu__item pre-header__menu-item--show-mobile-only">Магазины</a>
-            </div>
+            <?php sp_mobile_menu(); ?>
         </div>
     </div>
 </div>
@@ -1080,7 +1056,7 @@ js-test-popup__select-shop"
         <div class="box-modal__content">
             <div class="test-popup">
 
-                <form action="https://dyatkovo.ru/local/components/custom/uform.form/.ajax.php" method="POST" name="popup_form"
+                <form action="#" method="POST" name="popup_form"
                       id="popup_form" accept-charset="windows-1251"
                       class="uform-formdefault35 uform-form-pagedefault35" data-href="#thanks-for-request"
                       data-metrika-goal="SEND_CALL_BACK"
@@ -1090,6 +1066,7 @@ js-test-popup__select-shop"
                     <input type="hidden" name="line" value="775" />
                     <input type="hidden" name="src" value="/local/templates/dmi/footer.php" />
                     <input type="hidden" name="popup" value="" />
+                    <input type="hidden" name="action" value="get_call" />
 
                     <div class="test-popup__container">
                         <h2 class="test-popup__title test-popup__title_big">
@@ -1102,7 +1079,7 @@ js-test-popup__select-shop"
                                        placeholder="Имя*"
                                        rel="NAME"
                                        id="form_text_148" class="form__input"
-                                       name="PROPERTY[148][0]" value=""/>
+                                       name="name" value=""/>
                             </div>
                             <span class="err"></span>
                         </div>
@@ -1112,7 +1089,7 @@ js-test-popup__select-shop"
                                        placeholder="Телефон*"
                                        rel="PHONE"
                                        id="form_text_149" class="form__input"
-                                       name="PROPERTY[149][0]" value=""/>
+                                       name="phone" value=""/>
                             </div>
                             <span class="err"></span>
                         </div>
@@ -1121,7 +1098,7 @@ js-test-popup__select-shop"
                             <div class="form__textarea-holder">
                         <textarea id="form_text_150" cols="30" rows="10" class="form__textarea"
                                   placeholder="Комментарий"
-                                  name="PROPERTY[150][]"></textarea>
+                                  name="comment"></textarea>
                             </div>
                             <span class="err"></span>
                         </div>
@@ -1366,7 +1343,7 @@ js-test-popup__select-shop"
                                 </label>
                             </div>
                         </div>
-                        <p class="test-popup__personal-info">Заполняя форму, Вы принимаете <a href="index.html#" class="test-popup__text-link js-popup-link" data-href="#personal-info">пользовательское соглашение</a></p>
+                        <p class="test-popup__personal-info">Заполняя форму, Вы принимаете <a href="#" class="test-popup__text-link js-popup-link" data-href="#personal-info">пользовательское соглашение</a></p>
                     </div>
                     <button type="submit" class="test-popup__button send-btn">отправить</button>
 
@@ -2851,7 +2828,46 @@ js-test-popup__select-shop"
         $('[virtual-designer-button]').hide();
         $.cookie('virtual-designer-hidden', 1);
     });
+
+    jQuery(function ($) {
+       $('#popup_form').submit(function(event) {
+           event.preventDefault();
+           var th = $(this);
+
+           $.ajax({
+               url: '<?php echo admin_url( "admin-ajax.php" ) ?>',
+               type: 'POST',
+               data: th.serialize(),
+               beforeSend: function( xhr ) {
+                   $('#popup_form .test-popup__button').text('Загрузка, 5 сек...');
+               },
+               success: function( data ) {
+                   $('.js-preloader-Wait').hide();
+
+                   if(data == 'OK') {
+                       result = '<div class="ok" style="color: green">Сообщение отправлено</div>';
+                   } else {
+                       result = data;
+                   }
+
+                   $('#popup_form .test-popup__container').html(result);
+
+                   $('#popup_form .test-popup__button').text('Заявка отправлена');
+                   $('#popup_form .test-popup__button').attr("disabled", true);
+               }
+           });
+       });
+    });
 </script>
+
+
+<?php
+
+$sp_footer_scripts = carbon_get_theme_option('sp_footer_scripts');
+
+echo $sp_footer_scripts;
+
+?>
 
 </body>
 </html>

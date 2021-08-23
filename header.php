@@ -137,6 +137,13 @@ $phone = carbon_get_theme_option('sp_phone');
             }
         );
     </script>
+    <?php
+
+    $sp_header_scripts = carbon_get_theme_option('sp_header_scripts');
+
+    echo $sp_header_scripts;
+
+    ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -346,13 +353,13 @@ $phone = carbon_get_theme_option('sp_phone');
                 </div>
                 <div class="fixed-header__search-open" id="open-search">
                     <div class="fixed-header__search-open-input-holder">
-                        <form action="https://dyatkovo.ru/search/index.php">
+                        <form action="<?php esc_url( home_url( '/' ) ) ?>">
                             <input id="open-search-input"
-                                   type="text" name="q"
-                                   value=""
+                                   type="text" name="s"
+                                   value="<?php get_search_query() ?>"
                                    class="fixed-header__search-open-input js-search-input"
                                    placeholder="искать, например, ">
-                            <a href="index.html#" class="fixed-header__search-open-link" id="search-open-link">шкаф</a>
+                            <a href="#" class="fixed-header__search-open-link" id="search-open-link">шкаф</a>
                             <button type="submit" class="search__button" style="display: none;" name="s"
                                     value="Поиск"></button>
                         </form>

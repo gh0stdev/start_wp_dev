@@ -5,6 +5,52 @@ if ( ! defined( 'ABSPATH' ) ) {
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
+function crb_attach_post_meta() {
+    Container::make( 'post_meta', __( 'Опции страницы' ) )
+        ->where( 'post_type', '=', 'page' ) // only show our new fields on pages
+        ->add_fields( array(
+            Field::make( 'complex', 'sp_slides', 'Изображения на слайдер' )
+                ->set_layout( 'tabbed-horizontal' )
+                ->add_fields( array(
+                    Field::make( 'text', 'url', 'Ссылка' ),
+                    Field::make( 'image', 'image', 'Изображение' ),
+                ) ),
+        ) )
+        ->add_fields( array(
+            Field::make( 'complex', 'sp_features', 'Преимущества' )
+                ->set_layout( 'tabbed-horizontal' )
+                ->add_fields( array(
+                    Field::make( 'text', 'title', 'Название' ),
+                    Field::make( 'text', 'url', 'Ссылка' ),
+                    Field::make( 'image', 'image', 'Изображение' ),
+                ) ),
+        ) )
+        ->add_fields( array(
+            Field::make( 'textarea', 'script_map', 'Карта' ),
+        ) );
+}
+
+
+function sp_attach_product_post_meta() {
+    Container::make( 'post_meta', __( 'Опции продукта [Спец-Разработка Sega_Dev]' ) )
+        ->where( 'post_type', '=', 'goods' ) // only show our new fields on pages
+        ->add_fields( array(
+            Field::make( 'complex', 'sp_product_slides', 'Изображения на слайдер продукта' )
+                ->set_layout( 'tabbed-horizontal' )
+                ->add_fields( array(
+                    Field::make( 'image', 'image', 'Изображение' ),
+                ) ),
+        ) )
+        ->add_fields( array(
+            Field::make( 'complex', 'sp_product_gallery', 'Галерея' )
+                ->set_layout( 'tabbed-horizontal' )
+                ->add_fields( array(
+                    Field::make( 'text', 'title', 'Название' ),
+                    Field::make( 'image', 'image', 'Изображение' ),
+                ) ),
+        ) );
+}
+
 Container::make( 'theme_options', 'Настройки темы' )
     ->set_icon( 'dashicons-carrot' )
     ->add_tab( 'Шапка', array(
