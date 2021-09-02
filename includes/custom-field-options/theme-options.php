@@ -118,5 +118,7 @@ Container::make( 'theme_options', 'Настройки темы' )
         Field::make( 'text', 'sp_work_time', 'Время работы' )
             ->set_width( 30 ),
         Field::make( 'text', 'sp_email', 'E-mail' )
-            ->set_width( 30 )
+            ->set_width( 30 ),
+        Field::make( 'textarea', 'sp_popup_private', 'Согласие на обработку персональных данных' )
+            ->set_width( 100 )
     ) );

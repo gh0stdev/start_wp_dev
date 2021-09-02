@@ -7,6 +7,9 @@
 get_header();
 ?>
 
+    <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs__list">
+        <?php true_breadcrumbs(); ?>
+    </ul>
 
 	<div id="primary" class="content-inner">
         <div class="container">

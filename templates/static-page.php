@@ -8,6 +8,10 @@ $features = carbon_get_the_post_meta( 'sp_features' );
 
 get_header(); ?>
 
+    <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs__list">
+        <?php true_breadcrumbs(); ?>
+    </ul>
+
     <div class="content-inner">
 
         <div class="container single-section">

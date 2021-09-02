@@ -14,6 +14,11 @@ get_header();
 
         <?php if ( have_posts() ) : ?>
 
+            <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs__list">
+                <?php true_breadcrumbs(); ?>
+            </ul>
+
+
             <?php
                 the_archive_title( '<h1 class="page-title page-title_mb page-title_reverse container">', '</h1>' );
                 the_archive_description( '<div class="archive-description">', '</div>' );

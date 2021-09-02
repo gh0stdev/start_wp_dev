@@ -231,8 +231,7 @@ $phone = carbon_get_theme_option('sp_phone');
                         <?php
                             sp_pre_header_menu();
                         ?>
-<!--                        <a href="https://dyatkovo.ru/stores/"-->
-<!--                           class="pre-header__menu-item--show-mobile-only pre-header__menu-item">Магазины</a>-->
+
                     </nav>
                     <div class="pre-header__account">
                         <div class="fixed-header__right-part desktop-only">
@@ -276,7 +275,7 @@ $phone = carbon_get_theme_option('sp_phone');
                             if ($logo_id) : ?>
                                 <div class="logo-title">
                                     <a href="<?php echo home_url('/'); ?>">
-                                        <img src="<?php echo $logo[0]; ?>" width="120" height="30" alt="">
+                                        <img src="<?php echo $logo[0]; ?>" width="338" height="25" alt="Итальянские кухни в STOSASTUDIO">
                                     </a>
                                 </div>
 
@@ -344,10 +343,10 @@ $phone = carbon_get_theme_option('sp_phone');
                         sp_primary_menu();
                         ?>
 
-                        <div class="fixed-header__actions-wrap">
-                            <a href="https://dyatkovo.ru/catalogue/special-offer/" class="fixed-header__actions"
+                        <!-- <div class="fixed-header__actions-wrap">
+                            <a href="" class="fixed-header__actions"
                                style="font-weight:600">ЛИКВИДАЦИЯ</a>
-                        </div>
+                        </div> --!>
                     </div>
 
                 </div>

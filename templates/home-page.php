@@ -67,7 +67,9 @@ get_header(); ?>
         <?php endforeach; ?>
     </div>
 
-    <div class="good-slider swiper-container swiper-container_mainpage js-cards-container" id="good-slider">
+    <?php if (!empty($two_slider)): ?>
+
+        <div class="good-slider swiper-container swiper-container_mainpage js-cards-container" id="good-slider">
 
         <?php foreach ($two_slider as $slide): ?>
 
@@ -110,6 +112,8 @@ get_header(); ?>
         <button class="good-slider__button_black-and-white good-slider__button-next
         good-slider__button-next_black-and-white"></button>
     </div>
+
+    <?php endif; ?>
 
     <div class="container single-section">
 

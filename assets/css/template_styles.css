@@ -2930,9 +2930,6 @@ a.primary-link:hover {
     border-top-color: #7AB131;
 }
 
-.header-body__logo {
-    background: url('../images/dyatkovo-logo.svg') no-repeat center center;
-}
 
 .checkbox-styled-red-text {
     color: #7AB131;
@@ -3641,7 +3638,7 @@ a.primary-link:hover {
 }
 
 .ws-phone .header-body__timetable-itself {
-    color: #fff;
+    color: #6C945C;
     margin-top: 5px;
     text-align: center;
     text-transform: none;
